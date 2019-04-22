@@ -1,0 +1,635 @@
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url('../fonts/PTSerif-Regular.woff2') format('woff2'),
+      url('../fonts/PTSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif Bold';
+  src: url('../fonts/PTSerif-Bold.woff2') format('woff2'),
+      url('../fonts/PTSerif-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: url('../img/BG.jpg') no-repeat center/cover fixed;
+}
+
+.wrapper {
+  width: 90%;
+}
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  background-color: #011627;
+  color: #FF8FAB;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hideHeader {
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'PT Serif Bold';
+  font-size: 35px;
+  
+}
+
+.header-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Serif Regular';
+  font-size: 20px;
+}
+
+.header-menu ul li {
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+  width: auto;
+}
+
+.changePage {
+  text-decoration: none;
+  color: #ff8fab;
+  display: inline-block;
+  position: relative;
+}
+
+.changePage:visited, .changePage:link{
+  text-decoration: none;
+}
+
+.header-menu .changePage::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  right: 50%;
+  transform: translateX(50%);
+  height: 4px;
+  border-radius: 5px;
+  background-color: #FF8FAB;
+  transition: 0.2s ease-in-out;
+}
+
+.header-menu .changePage:hover:after {
+  width: 100%;
+}
+
+.header-menu ul li:last-child {
+  margin-right: 0;
+}
+
+/* HOME */
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.home .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.home-left, .home-right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-leftContent, .home-rightContent {
+  width: 100%;
+  height: 40%;
+  background-color: #011627;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Serif Regular';
+  font-size: 20px;
+}
+
+.home-leftContent button, .home-rightContent button {
+  font-family: 'PT Serif Bold';
+  border: 2px solid #FF8FAB;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #FF8FAB;
+  background-color: #011627;
+  transition: 0.3s;
+  outline: none;
+}
+
+.home-leftContent button:hover,
+.home-rightContent button:hover,
+.submitTest button:hover {
+  background-color: #FF8FAB;
+  transition: 0.3s;
+  color: #011627;
+}
+
+.passTest, .passTest:visited, .passTest:link {
+  text-decoration: none;
+  color: #FF8FAB;
+  transition: 0.3s;
+  width: 50%;
+  height: 25%;
+  margin-bottom: 30px;
+}
+
+.home-leftContent p, .home-rightContent p {
+  width: 50%;
+  text-align: center;
+  color: #FF8FAB;
+}
+
+.home-or {
+  width: 10%;
+  font-family: 'PT Serif Bold';
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #011627;
+}
+
+.home-or::before, .home-or::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 30%;
+  width: 5px;
+  border-radius: 10px;
+  background-color: #011627;
+}
+
+.home-or::before {
+  transform: translateY(-60%);
+}
+
+.home-or::after {
+  transform: translateY(60%);
+}
+
+/* TEST */
+
+/* DESIGN TEST */
+.test {
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #FCFFF7;
+}
+
+.test .wrapper {
+  height: 100%;
+}
+
+/* ------------- */
+
+.testLogic {
+  width: 100%;
+  background-color: #FCFFF7;
+  display: flex;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.title {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  font-family: 'PT Serif Regular';
+  font-size: 20px;
+  width: 70%;
+}
+
+.title h2 {
+  font-family: 'PT Serif Bold';
+  font-size: 40px;
+  color: #011627;
+  margin-bottom: 5px;
+}
+
+.title span {
+  color: #011627;
+  margin-left: 15px;
+}
+
+.testContent {
+  display: flex;
+  min-height: 100vh;
+}
+
+.testInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: #011627;
+  transition: 0.3s;
+}
+
+.hideTestInfo {
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.testTime, .questionsLeft {
+  width: 225px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF8FAB;
+  font-family: 'PT Serif Bold';
+  font-size: 15px;
+}
+
+.testTime {
+  flex-direction: column;
+}
+
+.timer, .answeredQuestions {
+  font-size: 20px;
+}
+
+.questionsLeft {
+  flex-direction: column;
+}
+
+.submitTest {
+  width: 350px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitTest button {
+  width: 60%;
+  height: 80%;
+  background-color: #011627;
+  border: 2px solid #FF8FAB;
+  color: #FF8FAB;
+  cursor: pointer;
+  font-family: 'PT Serif Bold';
+  font-size: 35px;
+  transition: 0.3s;
+  outline: none;
+  line-height: 5px;
+}
+
+.questions {
+  width: 100%;
+}
+
+.question, .result-question {
+  width: 100%;
+  font-family: 'PT Serif Bold';
+  font-size: 22px;
+  border: 5px solid #011627;
+  padding: 5px;
+  margin-bottom: 20px;
+  color: #011627;
+}
+
+.question:last-child, .result-question:last-child {
+  margin-bottom: 60px;
+}
+
+.question h3, .result-question h3 {
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.answers, .result-answers {
+  font-size: 18px;
+  font-family: 'PT Serif Regular';
+  display: flex;
+  flex-direction: column;
+}
+
+.answerContent {
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid #FF8FAB;
+}
+
+.answer:last-child .answerContent {
+  border: none;
+}
+
+.answerBG {
+  display: flex;
+}
+
+.clickedAnswer {
+  background-color: #eaeaea;
+}
+
+.clicked {
+  background-color: #aeaeae;
+}
+
+.checkboxHolder {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 5px;
+}
+
+.checkboxHolder input {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.fakeCheckbox {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #FCFFF7;
+  border: 1px solid #011627;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.fakeRadio {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #FCFFF7;
+  border: 1px solid #011627;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.fakeCheckbox-checked, .fakeRadio-checked {
+  background-color: #ff8fab;
+  transition: 0.2s;
+}
+
+.clicked {
+  background-color: #aeaeae;
+}
+
+.answerLabel {
+  display: flex;
+  line-height: 19px;
+  padding: 5px;
+}
+
+/* TIMEOUT SubmitAttempt */
+
+.timeOut, .attemptToSubmit {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 70%;
+  height: 60%;
+  top: 20%;
+  left: 15%;
+  background-color: #FCFFF7;
+  opacity: 0;
+  transform: scale(0, 0);
+  font-family: 'PT Serif Bold';
+  font-size: 70px;
+  color: #011627;
+  transition: 0.3s;
+  box-shadow: 0 0 15px 4px #011627;
+}
+
+.timeOutContent, .attemptToSubmitContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70%;
+  text-align: center;
+}
+
+.attemptToSubmitButtons {
+  font-family: 'PT Serif Bold';
+  margin-top: 20px;
+  width: 50%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.attemptToSubmitButtons button {
+  height: 100%;
+  width: 40%;
+  border: 2px solid #011627;
+  font-size: 45px;
+  cursor: pointer;
+  color: #011627;
+  background-color: #FCFFF7;
+  transition: 0.3s;
+  outline: none;
+}
+
+.timeOutContent button {
+  border: 2px solid #011627;
+  margin-top: 20px;
+  width: 50%;
+  height: 25%;
+  font-size: 45px;
+  cursor: pointer;
+  color: #011627;
+  background-color: #FCFFF7;
+  transition: 0.3s;
+  outline: none;
+}
+
+.timeOutContent button:hover, 
+.attemptToSubmitButtons button:hover {
+  transition: 0.3s;
+  color: #FCFFF7;
+  background-color: #011627;
+}
+
+.showTimeOut, .showAttemptToSubmit {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: 0.3s;
+}
+
+.blurTestLogic {
+  filter: blur(1px);
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+/* RESULTS */
+
+.wrongAnswer {
+  background-color: #FF1934;
+}
+
+.wrongQuestion {
+  border-color: #FF1934;
+}
+
+.wrongText {
+  color: #FF1934;
+}
+
+.rightAnswer {
+  background-color: #36C44B;
+}
+
+.rightQuestion {
+  border-color: #36C44B;
+}
+
+.rightText {
+  color: #36C44B;
+}
+
+.result-question {
+  position: relative;
+  perspective: 1000px;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+  transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+}
+
+.result-questionHide {
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.result-questionHide h3 {
+  display: none;
+}
+
+.result-question h3 {
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rightH3:hover {
+  background-color: #36C44B;
+  transition: 0.3s;
+}
+
+.wrongH3:hover {
+  background-color: #FF1934;
+  transition: 0.3s;
+}
+
+.result-answers {
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  transition: 0.4s ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.result-answersOpen {
+  padding-top: 20px;
+  transform: rotateX(0deg);
+  opacity: 1;
+  max-height: 100vh;
+  transition: 0.4s ease-in;
+}
+
+.lockInputs {
+  pointer-events: none;
+}
+
+/* PRELOADER */
+@keyframes rotateLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader {
+  width: 75px;
+  height: 75px;
+  border: 10px solid #011627;
+  border-radius: 50%;
+  border-top-color: #ff8fab;
+  animation: rotateLoader 1s infinite linear;
+}
+
+.hidePreloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
